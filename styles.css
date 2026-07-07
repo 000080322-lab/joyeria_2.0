@@ -1,0 +1,57 @@
+:root{
+  --gold:#caa53f;
+  --gold-dark:#b58f33;
+  --bg:#fbf7f3;
+  --muted:#9a8f85;
+  --white:#ffffff;
+  --max-width:1200px;
+}
+*{box-sizing:border-box}
+body{font-family:'Montserrat',system-ui,Arial,sans-serif;margin:0;background:var(--bg);color:#222}
+.container{max-width:var(--max-width);margin:0 auto;padding:1.2rem}
+.site-header{background:linear-gradient(180deg, rgba(255,255,255,0.6), transparent);backdrop-filter: blur(4px);position:sticky;top:0;z-index:20}
+.header-inner{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
+.brand{font-family:'Playfair Display',serif;color:var(--gold);margin:0;font-size:1.6rem}
+.nav a{margin-left:1rem;color:var(--muted);text-decoration:none;font-weight:600}
+
+.hero{padding:3rem 0}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.hero-text h2{font-family:'Playfair Display',serif;font-size:2.2rem;margin:0 0 .8rem;color:#1a1a1a}
+.hero-text p{color:var(--muted);margin:0 0 1.2rem}
+.hero-image img{width:100%;height:auto;border-radius:12px;box-shadow:0 6px 30px rgba(0,0,0,.08)}
+.btn-cta{display:inline-block;background:linear-gradient(90deg,var(--gold),var(--gold-dark));color:var(--white);padding:.8rem 1.2rem;border-radius:8px;text-decoration:none;font-weight:700}
+
+.gallery{padding:2rem 0}
+.gallery h3{font-family:'Playfair Display',serif;color:#111}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1rem}
+.card{background:var(--white);border-radius:10px;overflow:hidden;padding:0;display:flex;flex-direction:column;align-items:center;box-shadow:0 8px 20px rgba(0,0,0,.05)}
+.card img{width:100%;height:220px;object-fit:cover}
+.card span{padding:.7rem 0;color:var(--muted);font-weight:600}
+
+.promo{background:linear-gradient(90deg, rgba(202,165,63,0.08), transparent);padding:2.5rem 0;margin:2rem 0;border-top:1px solid rgba(0,0,0,0.03);border-bottom:1px solid rgba(0,0,0,0.03)}
+.promo-inner{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:center}
+.promo-text h3{font-family:'Playfair Display',serif;color:var(--gold)}
+.btn-secondary{display:inline-block;border:2px solid var(--gold);color:var(--gold);padding:.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:700}
+.promo-image img{width:100%;height:auto;border-radius:10px}
+
+.full-gallery{padding:1rem 0}
+.masonry{column-count:3;column-gap:1rem}
+.masonry img{width:100%;margin-bottom:1rem;border-radius:8px;display:inline-block}
+
+.contact{padding:2rem 0}
+.contact-list{list-style:none;padding:0;margin:0;color:var(--muted)}
+.contact-list a{color:var(--gold);text-decoration:none;font-weight:600}
+
+.site-footer{padding:1.6rem 0;background:transparent;color:var(--muted)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .masonry{column-count:2}
+}
+@media(max-width:550px){
+  .grid{grid-template-columns:1fr}
+  .masonry{column-count:1}
+  .footer-inner{flex-direction:column;gap:.6rem}
+}

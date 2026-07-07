@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Joyas | Brillo Juvenil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="brand">Brillo Juvenil</h1>
+        <nav class="nav">
+          <a href="#coleccion">Colección</a>
+          <a href="#promocion">Promoción</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h2>Elegancia joven, diseño sofisticado</h2>
+            <p>Joyas pensadas para quienes aman destacar con sutileza. Collares, anillos, pulseras y sets de fiesta con un acabado luminoso.</p>
+            <a class="btn-cta" href="https://www.instagram.com/ed.garcialop?igsh=ZzRtY2hkZmljNGdp&utm_source=qr" target="_blank" rel="noopener noreferrer">Explora la colección</a>
+          </div>
+          <div class="hero-image">
+            <img src="https://source.unsplash.com/900x900/?jewelry,necklace" alt="Collar elegante" />
+          </div>
+        </div>
+      </section>
+
+      <section id="coleccion" class="gallery container">
+        <h3>Destacados</h3>
+        <div class="grid">
+          <div class="card"><img src="https://source.unsplash.com/800x800/?ring,jewelry" alt="Anillo moderno" /><span>Anillos</span></div>
+          <div class="card"><img src="https://source.unsplash.com/800x800/?necklace,jewelry" alt="Collar brillante" /><span>Collares</span></div>
+          <div class="card"><img src="https://source.unsplash.com/800x800/?bracelet,jewelry" alt="Pulsera delicada" /><span>Pulseras</span></div>
+          <div class="card"><img src="https://source.unsplash.com/800x800/?jewelry,earrings" alt="Set de fiesta" /><span>Sets de fiesta</span></div>
+        </div>
+      </section>
+
+      <section id="promocion" class="promo">
+        <div class="container promo-inner">
+          <div class="promo-text">
+            <h3>Promoción limitada</h3>
+            <p>20% de descuento en sets de fiesta por tiempo limitado. Encuentra tu look perfecto para destacar en cada evento.</p>
+            <a class="btn-secondary" href="#contacto">Aprovechar promoción</a>
+          </div>
+          <div class="promo-image">
+            <img src="https://source.unsplash.com/800x600/?jewelry,party" alt="Set de fiesta brillante" />
+          </div>
+        </div>
+      </section>
+
+      <section class="full-gallery container">
+        <h3>Galería</h3>
+        <div class="masonry">
+          <img src="https://source.unsplash.com/900x700/?gold,jewelry" alt="Joyas doradas" />
+          <img src="https://source.unsplash.com/900x900/?fashion,jewelry" alt="Joyas moda" />
+          <img src="https://source.unsplash.com/1200x800/?minimal,jewelry" alt="Diseño minimalista" />
+          <img src="https://source.unsplash.com/1000x1000/?luxury,jewelry" alt="Lujo moderno" />
+        </div>
+      </section>
+
+      <section id="contacto" class="contact container">
+        <h3>Contacto</h3>
+        <p>¿Tienes dudas o quieres un pedido personalizado? Escríbenos:</p>
+        <ul class="contact-list">
+          <li>Email: <a href="mailto:ventas@brillojuvenil.com">ventas@brillojuvenil.com</a></li>
+          <li>Instagram: <a href="https://instagram.com/">@brillojuvenil</a></li>
+          <li>Teléfono: <a href="tel:+1234567890">+1 234 567 890</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Brillo Juvenil — Joyas con estilo sofisticado</p>
+        <p>&copy; <span id="year"></span></p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

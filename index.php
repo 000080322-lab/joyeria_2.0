@@ -1,3 +1,13 @@
+<?php
+require_once __DIR__ . '/db.php';
+
+$displayName = 'visitante';
+if (!empty($_SESSION['user_name'])) {
+    $displayName = $_SESSION['user_name'];
+} elseif (!empty($_GET['name'])) {
+    $displayName = $_GET['name'];
+}
+?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -11,16 +21,19 @@
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand-link" href="#">
+        <a class="brand-link" href="index.php">
           <span class="brand-mark">✦</span>
           <h1 class="brand">Brillo Juvenil</h1>
         </a>
-        <nav class="nav">
-          <a href="#coleccion">Colección</a>
-          <a href="#beneficios">Beneficios</a>
-          <a href="#promocion">Promoción</a>
-          <a href="#contacto">Contacto</a>
-        </nav>
+        <div class="header-actions">
+          <div class="greeting-pill">Hola, <?= htmlspecialchars($displayName) ?></div>
+          <?php if (isLoggedIn()): ?>
+            <a class="login-link" href="<?= $_SESSION['role'] === 'admin' ? 'dashboard.php' : 'index.php' ?>">Mi cuenta</a>
+            <a class="login-link secondary" href="logout.php">Salir</a>
+          <?php else: ?>
+            <a class="login-link" href="login.php">Iniciar sesión</a>
+          <?php endif; ?>
+        </div>
       </div>
     </header>
 
